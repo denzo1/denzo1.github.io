@@ -3,7 +3,7 @@ layout: posts
 ---
         {% for post in paginator.posts %}
         <li>
-            <time>{{ page.date | date: "%-d %B %Y" }}</time>
+            <time>{{ page.date | date: "%-d %B %Y %H %M | date_to_string" }}</time>
             <h3>{% if page.link %}<a href="">{{ post.title }}</a> *{% else %}<a href="">{{ post.title }}</a>{% endif %}</h3>
         </li>
         {% endfor %}
